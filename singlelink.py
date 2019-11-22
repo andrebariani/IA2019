@@ -37,6 +37,7 @@ for rodar in range(12, 4, -1):
     #inica auxiliares
 
     while(len(vetorCluster) > nCluster):
+        print(len(vetorCluster))
         menor = 9999
         for j in range(0, len(vetorCluster)):
             if j+1 < len(vetorCluster):

@@ -40,6 +40,7 @@ for rodar in range(12,4,-1):
 
     #roda até ter o numero de clusters pedido
     while(len(vetorCluster) > nCluster):
+        print (len(vetorCluster))
         #inicia o auxiliar
         menor = 9999
         #comparado as distancias entre dados de clusters diferentes e pegando a media
@@ -57,8 +58,9 @@ for rodar in range(12,4,-1):
                         cluster2 = k
         #uniao de clusters
         try:
-            for j in vetorCluster[cluster2]:
-                vetorCluster[cluster1].append(j)
+            vetorCluster[cluster1] += vetorCluster[cluster2]
+            #for j in vetorCluster[cluster2]:
+            #    vetorCluster[cluster1].append(j)
             vetorCluster.pop(cluster2)
         except:
             print (len(vetorCluster))

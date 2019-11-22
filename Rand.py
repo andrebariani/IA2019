@@ -3,10 +3,10 @@ from sklearn.metrics import adjusted_rand_score
 dadosReal = []
 dadosResultado = []
 
-#leitura = "datasets\monkeyReal1.clu"
-#leitura = "datasets\c2ds1-2spReal.clu"
-leitura = "datasets/c2ds3-2gReal.clu"
-#leitura2 = "datasets\monkey\k5\monkeyKMedia.clu"
+leitura = "datasets/monkeyReal1.clu"
+#leitura = "datasets/c2ds1-2spReal.clu"
+#leitura = "datasets/c2ds3-2gReal.clu"
+leitura2 = "resultados/monkey/k12/monkeyAverageLink.clu"
 #leitura2 = "datasets\monkey\k6\monkeyKMedia.clu"
 #leitura2 = "datasets\monkey\k7\monkeyKMedia.clu"
 #leitura2 = "datasets\monkey\k8\monkeyKMedia.clu"
@@ -14,15 +14,15 @@ leitura = "datasets/c2ds3-2gReal.clu"
 #leitura2 = "datasets\monkey\k10\monkeyKMedia.clu"
 #leitura2 = "datasets\monkey\k11\monkeyKMedia.clu"
 #leitura2 = "datasets\monkey\k12\monkeyKMedia.clu"
-#leitura2 = "datasets\c2ds1-2sp\k2\c2ds1-2spKMedia.clu"
+#leitura2 = "resultados/c2ds1-2sp/k5/c2ds1-2spKMedia.clu"
 #leitura2 = "datasets\c2ds1-2sp\k3\c2ds1-2spKMedia.clu"
-#leitura2 = "datasets\c2ds1-2sp\k4\c2ds1-2spKMedia.clu"
+#leitura2 = "resultados/c2ds1-2sp/k5/c2ds1-2spAverageLink.clu"
 #leitura2 = "datasets\c2ds1-2sp\k5\c2ds1-2spKMedia.clu"
-#leitura2 = "datasets\c2ds3-2g\k2\c2ds3-2gKMedia.clu"
+#leitura2 = "resultados/c2ds3-2g/k5/c2ds3-2gKMedia.clu"
 #leitura2 = "datasets\c2ds3-2g\k3\c2ds3-2gKMedia.clu"
 #leitura2 = "datasets\c2ds3-2g\k4\c2ds3-2gKMedia.clu"
 #leitura2 = "datasets\c2ds3-2g\k5\c2ds3-2gKMedia.clu"
-leitura2 = "resultados/c2ds3-2g/k5/c2ds3-2gSingleLink.clu"
+#leitura2 = "resultados/c2ds3-2g/k5/c2ds3-2gAverageLink.clu"
 
 
 a = open(leitura, "r");
