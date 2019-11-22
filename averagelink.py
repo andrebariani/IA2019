@@ -1,39 +1,41 @@
 import math
 import random
 
+#inciando leitura de dados
+dados = [] #dsera matriz contendo informacao da leitura
+dados.clear()
+
+# Os tres arquivos estao aqui, basta escolher qual
+#leitura = "datasets/c2ds1-2sp.txt"
+#leitura = "datasets/c2ds3-2g.txt"
+leitura = "datasets/monkey.txt"
+
+a = open(leitura, "r")
+
+#lendo linha a linha e colocando nos dados
+a.readline()
+for dado in a:
+    linha = dado.split('\t')
+    dados.append([ str(linha[0]), float(linha[1]), float(linha[2]) ])
+a.close()
+
+#vetor para armazenar clusters
+vetorCluster = []
+
+#inicia vetor de clusters e coloca cada dado em um cluster
+for i in range(0, len(dados)):
+    vetorCluster.append([])
+    vetorCluster[i].append(dados[i])
+        
 #for rodar in range(2,6):
-for rodar in range(5,13):
-    #inciando leitura de dados
-    dados = [] #dsera matriz contendo informacao da leitura
-    dados.clear()
-
-    # Os tres arquivos estao aqui, basta escolher qual
-    #leitura = "datasets\c2ds1-2sp.txt"
-    #leitura = "datasets\c2ds3-2g.txt"
-    leitura = "datasets\monkey.txt"
-
-    a = open(leitura, "r");
-
-    #lendo linha a linha e colocando nos dados
-    a.readline()
-    for dado in a:
-        linha = dado.split('\t')
-        dados.append([ str(linha[0]), float(linha[1]), float(linha[2]) ])
-    a.close()
-
-
+for rodar in range(12,4,-1):
+    
     #iniciando recebimento de informacoes
     #nCluster = int(input("Digite o numero desejado de clusters: "))
     nCluster = int(rodar)
     print("Iniciando algoritmo com " + str(nCluster) + " clusters...")
 
-    #vetor para armazenar clusters
-    vetorCluster = []
-
-    #inicia vetor de clusters e coloca cada dado em um cluster
-    for i in range(0, len(dados)):
-        vetorCluster.append([])
-        vetorCluster[i].append(dados[i])
+    
 
 
     #roda até ter o numero de clusters pedido
@@ -81,9 +83,9 @@ for rodar in range(5,13):
     """
 
     #iniciando processo de escrita
-    #escrita = 'resultados\c2ds1-2sp\k' + str(nCluster) + '\c2ds1-2spAverageLink.clu' #coloca na pasta de acordo com nCluster
-    #escrita = 'resultados\c2ds3-2g\k' + str(nCluster) + '\c2ds3-2gAverageLink.clu' #coloca na pasta de acordo com nCluster
-    escrita = 'resultados\monkey\k' + str(nCluster) + '\monkeyAverageLink.clu' #coloca na pasta de acordo com nCluster
+    #escrita = 'resultados/c2ds1-2sp/k' + str(nCluster) + '/c2ds1-2spAverageLink.clu' #coloca na pasta de acordo com nCluster
+    #escrita = 'resultados/c2ds3-2g/k' + str(nCluster) + '/c2ds3-2gAverageLink.clu' #coloca na pasta de acordo com nCluster
+    escrita = 'resultados/monkey/k' + str(nCluster) + '/monkeyAverageLink.clu' #coloca na pasta de acordo com nCluster
 
     #para cada dado busca qual cluster esta e escreve
     a = open(escrita, "w")
