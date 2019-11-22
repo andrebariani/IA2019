@@ -11,8 +11,8 @@ leitura = input("Coloque o arquivo com os pontos:")
 leitura2 = input("Coloque o nome do algoritmo desejado:")
 nCluster = int(input("Coloque o número minimo de clusters:"))
 
-#b = open("resultados\\" + leitura + "\k" + str(nCluster) + "\\" + leitura + leitura2 + ".clu", "r");
-b = open("datasets\\" + leitura + "Real.clu", "r");
+b = open("resultados/" + leitura + "/k" + str(nCluster) + "/" + leitura + leitura2 + ".clu", "r")
+#b = open("datasets/" + leitura + "Real1.clu", "r")
 
 xCluster =[]
 yCluster = []
@@ -24,7 +24,7 @@ for dado in b:
 	dictionary[str(linha[0])] = int(linha[1])
 b.close()
 
-a = open("datasets\\" + leitura + ".txt", "r")
+a = open("datasets/" + leitura + ".txt", "r")
 #a.readLine();
 i = 0
 for dado in a:
